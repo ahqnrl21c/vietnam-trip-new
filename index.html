@@ -325,6 +325,21 @@ body:has(.dashboard){background:#e9e9e1;color:#253a33}
 @media(max-width:560px){.dashboard .masthead{min-height:196px!important;padding:22px 16px 24px!important}.dashboard .masthead h1{font-size:clamp(18px,4.65vw,25px)!important;letter-spacing:-.9px!important;line-height:1.4!important;margin:15px 0 8px!important;white-space:nowrap}.dashboard .masthead p{font-size:clamp(11px,3.05vw,14px)!important}}
 @media(max-width:330px){.dashboard .masthead h1{white-space:normal;font-size:18px!important}}
 </style>
+<style id="premium-v2-hero-final">
+/* Premium v2: use the unlettered Hanoi train-street photograph and clean type. */
+.dashboard .masthead {min-height:310px!important;height:auto!important;padding:35px 38px 35px!important;justify-content:center!important;background-color:#12382f!important;background-position:center 48%!important;border-radius:0!important;isolation:isolate!important;}
+.dashboard .masthead::before {content:""!important;position:absolute!important;inset:0!important;z-index:0!important;background:linear-gradient(90deg,rgba(3,22,20,.83) 0%,rgba(3,22,20,.60) 37%,rgba(3,22,20,.18) 76%,rgba(3,22,20,.08) 100%)!important;}
+.dashboard .masthead>.datepill,.dashboard .masthead>h1,.dashboard .masthead>p{position:relative!important;z-index:1!important;}
+.dashboard .masthead h1{font-family:'Noto Serif KR',serif!important;font-weight:800!important;font-size:clamp(29px,3.4vw,46px)!important;line-height:1.32!important;letter-spacing:-1.6px!important;max-width:750px!important;margin:20px 0 13px!important;white-space:normal!important;word-break:keep-all!important;text-shadow:0 2px 12px rgba(0,0,0,.45)!important;}
+.dashboard .masthead p{font-size:clamp(13px,1.5vw,18px)!important;line-height:1.55!important;max-width:700px!important;margin:0!important;color:#fff!important;}
+.dashboard .masthead .datepill{background:#fff0d2!important;color:#164538!important;font-size:13px!important;font-weight:800!important;border-radius:30px!important;padding:9px 15px!important;}
+.dashboard .regions{gap:14px!important;margin-top:18px!important;}
+.dashboard .regions .region{border-radius:18px!important;overflow:hidden!important;}
+.dashboard .regions .region img{width:100%!important;height:100%!important;object-fit:cover!important;}
+@media(max-width:760px){.dashboard .masthead{min-height:280px!important;padding:32px 24px!important;}.dashboard .masthead h1{font-size:clamp(25px,5.2vw,36px)!important;max-width:520px!important;}.dashboard .regions{gap:9px!important;margin-top:12px!important;}}
+@media(max-width:560px){.dashboard .masthead{min-height:250px!important;padding:26px 18px 25px!important;background-position:58% center!important;}.dashboard .masthead::before{background:linear-gradient(90deg,rgba(3,22,20,.84) 0%,rgba(3,22,20,.54) 67%,rgba(3,22,20,.18) 100%)!important;}.dashboard .masthead h1{font-size:clamp(25px,6.1vw,31px)!important;line-height:1.4!important;letter-spacing:-1.1px!important;margin:16px 0 11px!important;max-width:330px!important;white-space:normal!important;}.dashboard .masthead p{font-size:12px!important;line-height:1.6!important;max-width:310px!important;}.dashboard .masthead .datepill{font-size:11px!important;padding:8px 12px!important;}.dashboard .regions{gap:8px!important;margin-top:12px!important;}.dashboard .regions .region{height:156px!important;border-radius:14px!important;}.dashboard .regions .region .regtext{font-size:clamp(15px,4.3vw,20px)!important;left:9px!important;bottom:11px!important;}.dashboard .regions .region .regtext small{font-size:11px!important;}}
+@media(max-width:360px){.dashboard .masthead h1{font-size:24px!important;}.dashboard .masthead{min-height:258px!important;}}
+</style>
 </head><body>
 <div class="dashboard" id="dashboard">
 <aside class="sidebar"><div class="brand"><span class="plane">✈</span>Hanoi · Sapa ·<br>Ninh Binh<br><small>Travel Guidebook</small></div><nav class="sidenav" id="dashnav">
@@ -484,7 +499,7 @@ showPage('home');
  const style=document.createElement('style');
  style.textContent='.region-card img{object-fit:cover}';
  const banner=document.querySelector('.dashboard .masthead');
- if(banner){const img=pics.banner||pics.hanoi; if(img){banner.style.setProperty('background-image','url(\"'+img+'\")','important');banner.style.setProperty('background-size','cover','important');banner.style.setProperty('background-position','center 48%','important');}}
+ if(banner){const img=pics.hanoi||pics.banner; if(img){banner.style.setProperty('background-image','url(\"'+img+'\")','important');banner.style.setProperty('background-size','cover','important');banner.style.setProperty('background-position','center 48%','important');}}
  document.head.appendChild(style);
  document.querySelectorAll('[id^="region-"]').forEach(el=>{let k=el.id.slice(7);if(pics[k]&&!el.getAttribute('src'))el.src=pics[k]});
 })();
