@@ -208,6 +208,98 @@ html{-webkit-text-size-adjust:100%}button,a{-webkit-tap-highlight-color:transpar
  .dashboard .region .regtext small{font-size:12px!important}
 }
 </style>
+<style id="editorial-premium-redesign-v1">
+/* Editorial travel guide redesign — presentation only; preserves all existing scripts and data. */
+.dashboard {
+ --navy:#173f38;--blue:#2c6657;--bg:#f5f3ec;--ink:#253a33;--forest:#1d5145;--gold:#c7a26c;--cream:#fbfaf6;--line:#e8e4d9;--muted:#718077;
+ background:#f5f3ec;color:#253a33;font-family:'DM Sans','Noto Sans KR',sans-serif;
+}
+body:has(.dashboard){background:#e9e9e1;color:#253a33}
+.dashboard .sidebar{background:linear-gradient(165deg,#153e35 0%,#204c41 70%,#16382f 100%);box-shadow:3px 0 20px #102f2910}
+.dashboard .brand{font-family:'Noto Serif KR',serif;letter-spacing:-.3px}
+.dashboard .sidenav{gap:6px}
+.dashboard .sidenav button{border-radius:11px;transition:background .2s ease,transform .2s ease;color:#e2eee7}
+.dashboard .sidenav button.active,.dashboard .sidenav button:hover{background:#ffffff25;color:#fff}
+.dashboard .sidenav button.active{box-shadow:inset 3px 0 #d9b77e}
+.dashboard .workspace{background:#f5f3ec}
+.dashboard .masthead{height:205px;background:linear-gradient(90deg,#0d2b26e8 0%,#123c34b8 53%,#183b3559 100%),url('https://images.unsplash.com/photo-1500534623283-312aade485b7?w=1600&q=85') center 43%/cover;padding:27px 34px}
+.dashboard .masthead .datepill{background:#f4e6c8!important;color:#244539!important;border:1px solid #fff5e4;border-radius:30px;letter-spacing:.4px}
+.dashboard .masthead h1{font-family:'Noto Serif KR',serif;letter-spacing:-1.4px;font-size:clamp(29px,3.1vw,40px)!important;margin:13px 0 8px;line-height:1.32!important;text-shadow:0 2px 15px #0b211c66}
+.dashboard .masthead p{color:#f0eee4!important;letter-spacing:.2px}
+.dashboard .content-area{padding:0 24px 36px}
+.dashboard .regions{gap:14px;margin-top:20px}
+.dashboard .region{height:215px!important;border:0;border-radius:19px;box-shadow:0 8px 26px #193b2b20;transition:transform .2s ease,box-shadow .2s ease}
+.dashboard .region:hover{transform:translateY(-3px);box-shadow:0 12px 30px #193b2b30}
+.dashboard .region:after{background:linear-gradient(180deg,#10251e08 20%,#091d17d9 100%)}
+.dashboard .region .regtext{left:18px!important;bottom:18px!important;font-family:'Noto Serif KR',serif;letter-spacing:-.5px;text-shadow:0 2px 9px #07150e99}
+.dashboard .region .regtext small{font-family:'Noto Sans KR',sans-serif;font-weight:500!important;color:#f2eadb;margin-top:6px}
+.dashboard .region .arrow{background:#ffffff2e;border:1px solid #ffffff65;backdrop-filter:blur(6px)}
+.dashboard .main-grid{gap:18px;margin-top:22px}
+.dashboard .panel{border:1px solid #ebe7dc;background:#fffefa;border-radius:20px;padding:23px;box-shadow:0 5px 20px #233f2b0b}
+.dashboard .panel h2,.dashboard .inner-page h2{font-family:'Noto Serif KR',serif;letter-spacing:-.8px;color:#203d32;font-weight:700}
+.dashboard .panel-head{padding-bottom:8px}
+.dashboard .panel-head button{color:#2c6657;font-weight:700}
+.dashboard .date{background:#f5f5ef!important;border:1px solid #e6e7db!important;border-radius:12px!important;color:#52655a!important;transition:background .2s ease}
+.dashboard .date.on{background:#24584b!important;border-color:#24584b!important;color:#fff!important;box-shadow:0 3px 10px #24584b2a}
+.dashboard .event{border-bottom:1px solid #edece4;padding:15px 0;gap:12px}
+.dashboard .event:last-child{border-bottom:0}
+.dashboard .timecol span{color:#356354;font-weight:800}
+.dashboard .event h4{color:#223a30;font-weight:800;letter-spacing:-.4px;margin:5px 0!important}
+.dashboard .event p{color:#68766d}
+.dashboard .type{color:#987447!important;letter-spacing:.7px}
+.dashboard .action{border-radius:9px;background:#f3f7f2;border:1px solid #e1e9df;color:#2e5d4e;font-weight:700}
+.dashboard .action.guide{background:#24584b;border-color:#24584b;color:#fff}
+.dashboard .add{background:#fafbf7;border:1px dashed #b7c9b8;border-radius:13px;color:#2c6454}
+.dashboard .note{background:#f2f3ec;border:1px solid #e7e9df;color:#627269;border-radius:13px}
+.dashboard .quickgrid{gap:10px}
+.dashboard .quickgrid button{border-radius:14px;border:1px solid #e8e7dc;box-shadow:none;background:#fafbf7;color:#365c4c;padding:16px 6px;transition:background .2s ease}
+.dashboard .quickgrid button:hover{background:#edf4ec}
+.dashboard .quickgrid b{color:#3d765d}
+.dashboard .weathergrid div{background:#f6f7f1;border-color:#e8e8dc;border-radius:12px}
+.dashboard .inner-page{margin-top:20px}
+.dashboard .info,.dashboard .featurehero{background:#fffefa;border:1px solid #e8e6db;border-radius:17px;box-shadow:0 3px 14px #23402b09}
+.dashboard .info h3{color:#254438}
+.dashboard .info a{color:#25634e}
+.dashboard .chip{background:#fffefa;border:1px solid #e1e4d9;color:#50675a}
+.dashboard .chip.on{background:#24584b;color:#fff;border-color:#24584b}
+.dashboard .tool,.dashboard .smallbtn,.dashboard .region-edit button{background:#fffefa;border:1px solid #e1e6d9;border-radius:12px;color:#2e6553}
+.dashboard .fieldgroup input,.dashboard .fieldgroup textarea{border:1px solid #dce5d9;background:#fffefa;border-radius:12px}
+.dashboard #schedule .daybanner{border-radius:17px!important;box-shadow:0 6px 20px #193b2b1a}
+.dashboard #schedule .daybanner .daytext h3{font-family:'Noto Serif KR',serif;font-weight:700;letter-spacing:-.7px}
+.dashboard #schedule .daybanner .daytext p{color:#f4f2e8}
+.dashboard .dash-foot{color:#8b978a}
+.dashboard button:focus-visible,.dashboard a:focus-visible{outline:3px solid #c5a46b;outline-offset:3px}
+@media(max-width:850px){
+ .dashboard .masthead{height:190px;padding:23px}
+ .dashboard .content-area{padding:0 15px 25px}
+ .dashboard .regions{gap:9px;margin-top:13px}
+ .dashboard .region{height:185px!important}
+ .dashboard .panel{padding:17px}
+ .dashboard .main-grid{gap:12px;margin-top:14px}
+}
+@media(max-width:560px){
+ .dashboard .sidebar{background:#153f35;border-top:1px solid #335b4b}
+ .dashboard .sidenav button.active{background:#ffffff18;box-shadow:inset 0 3px #d9b77e}
+ .dashboard .workspace{padding-bottom:12px}
+ .dashboard .masthead{height:auto;min-height:190px!important;padding:23px 19px!important}
+ .dashboard .masthead h1{font-size:30px!important;line-height:1.32!important;margin-top:13px}
+ .dashboard .masthead p{font-size:14px!important}
+ .dashboard .content-area{padding:0 12px 24px}
+ .dashboard .regions{gap:8px;margin-top:12px}
+ .dashboard .region{height:166px!important;border-radius:13px}
+ .dashboard .region .regtext{font-family:'Noto Sans KR',sans-serif;font-size:20px!important;left:10px!important;bottom:12px!important}
+ .dashboard .region .regtext small{font-size:12px!important;margin-top:3px}
+ .dashboard .region .arrow{display:none}
+ .dashboard .panel{padding:16px 14px;border-radius:16px}
+ .dashboard .main-grid{gap:12px;margin-top:13px}
+ .dashboard .event{padding:13px 0}
+ .dashboard .event h4{font-size:17px!important}
+ .dashboard #schedule .daybanner{border-radius:14px!important}
+ .dashboard #schedule .daybanner .daytext h3{font-size:23px!important}
+}
+@media(prefers-reduced-motion:reduce){.dashboard .region,.dashboard .sidenav button,.dashboard .quickgrid button{transition:none}}
+
+</style>
 </head><body>
 <div class="dashboard" id="dashboard">
 <aside class="sidebar"><div class="brand"><span class="plane">✈</span>Hanoi · Sapa ·<br>Ninh Binh<br><small>Travel Guidebook</small></div><nav class="sidenav" id="dashnav">
