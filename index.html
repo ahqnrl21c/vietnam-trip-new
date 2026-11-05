@@ -122,7 +122,20 @@ html{-webkit-text-size-adjust:100%}button,a{-webkit-tap-highlight-color:transpar
 .dashboard #schedule .daybanner .daytext h3{font-size:17px;margin:4px 0 2px}
 .dashboard #schedule .daybanner .daytext p{font-size:9px}
 }
-</style></head><body>
+</style><style id="itinerary-readable-fonts">
+/* 일정 목록 글자 크기만 조정: 사진, 레이아웃, 데이터, 필터 동작은 유지 */
+.dashboard .event h4 { font-size: 18px !important; line-height: 1.45 !important; }
+.dashboard .event p { font-size: 15px !important; line-height: 1.55 !important; }
+.dashboard .timecol span { font-size: 14px !important; line-height: 1.4 !important; }
+.dashboard .type { font-size: 11px !important; }
+.dashboard .action { font-size: 12px !important; }
+.dashboard .categorychips button, .dashboard .filterbtn { font-size: 13px !important; }
+@media (max-width: 560px) {
+  .dashboard .timecol { width: 65px !important; }
+  .dashboard .event { gap: 8px !important; }
+}
+</style>
+</head><body>
 <div class="dashboard" id="dashboard">
 <aside class="sidebar"><div class="brand"><span class="plane">✈</span>Hanoi · Sapa ·<br>Ninh Binh<br><small>Travel Guidebook</small></div><nav class="sidenav" id="dashnav">
 <button class="active" data-page="home"><span class="ico">⌂</span>홈</button><button data-page="schedule"><span class="ico">▦</span>여행 일정</button><button data-page="places"><span class="ico">♧</span>방문 명소</button><button data-page="stay"><span class="ico">▤</span>숙소</button><button data-page="food"><span class="ico">♨</span>맛집</button><button data-page="map"><span class="ico">◫</span>지도</button><button data-page="check"><span class="ico">☑</span>체크리스트</button><button data-page="memo"><span class="ico">▤</span>메모</button><button data-page="photos"><span class="ico">▧</span>내 사진</button><button data-page="settings"><span class="ico">⚙</span>설정 / 백업</button></nav><div class="side-art">♜</div></aside>
