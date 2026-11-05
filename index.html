@@ -315,21 +315,15 @@ body:has(.dashboard){background:#e9e9e1;color:#253a33}
 @media(max-width:360px){.dashboard .masthead h1{font-size:20px!important}}
 </style>
 <style id="masthead-polish-final">
-/* Clear visual hierarchy, opaque enough to hide distracting background details. */
-.dashboard .masthead{isolation:isolate;position:relative;min-height:220px!important;padding:26px 24px 28px!important;gap:0;justify-content:center;background-image:linear-gradient(90deg,rgba(9,35,35,.92) 0%,rgba(12,43,44,.84) 55%,rgba(14,45,49,.65) 100%),url("https://images.unsplash.com/photo-1500534623283-312aade485b7?w=1600&q=85")!important;background-size:cover!important;background-position:center 43%!important}
-.dashboard .masthead::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,29,30,.25),transparent 65%);pointer-events:none;z-index:0}
+/* Keep the original embedded travel photo visible; shade only the text side. */
+.dashboard .masthead{isolation:isolate;position:relative;box-sizing:border-box;min-height:215px!important;height:auto!important;padding:24px 22px 25px!important;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;overflow:hidden;background-color:#244b49;background-size:cover!important;background-position:center 48%!important}
+.dashboard .masthead::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,27,32,.65) 0%,rgba(8,27,32,.37) 55%,rgba(8,27,32,.10) 100%);pointer-events:none;z-index:0}
 .dashboard .masthead>.datepill,.dashboard .masthead>h1,.dashboard .masthead>p{position:relative;z-index:1;flex-shrink:0}
-.dashboard .masthead h1{font-size:clamp(26px,3vw,38px)!important;letter-spacing:-.9px!important;line-height:1.35!important;margin:17px 0 11px!important;max-width:100%;text-shadow:0 2px 8px rgba(0,0,0,.25)!important;word-break:keep-all;overflow-wrap:normal}
-.dashboard .masthead p{font-size:14px!important;line-height:1.55!important;color:#f6f5ed!important;text-shadow:0 1px 4px rgba(0,0,0,.3)}
-.dashboard .masthead .datepill{display:inline-flex;align-items:center;width:max-content;max-width:100%;font-size:12px!important;padding:7px 13px!important;white-space:nowrap}
-@media(max-width:560px){
-.dashboard .masthead{min-height:206px!important;padding:24px 17px 25px!important}
-.dashboard .masthead h1{font-size:clamp(19px,5.0vw,26px)!important;letter-spacing:-.9px!important;line-height:1.42!important;margin:17px 0 9px!important;text-wrap:nowrap;white-space:nowrap}
-.dashboard .masthead p{font-size:clamp(11px,3.1vw,14px)!important;line-height:1.5!important}
-.dashboard .masthead .datepill{font-size:12px!important;padding:7px 12px!important}
-}
-@media(max-width:380px){.dashboard .masthead h1{font-size:clamp(17px,4.85vw,19px)!important;letter-spacing:-1px!important}}
-@media(max-width:330px){.dashboard .masthead h1{white-space:normal;text-wrap:balance}}
+.dashboard .masthead h1{font-family:'Noto Serif KR',serif;font-size:clamp(23px,3vw,36px)!important;letter-spacing:-1px!important;line-height:1.35!important;margin:15px 0 9px!important;max-width:100%;word-break:keep-all;overflow-wrap:normal;text-shadow:0 2px 7px rgba(0,0,0,.45)!important}
+.dashboard .masthead p{font-size:14px!important;line-height:1.55!important;color:#fff!important;text-shadow:0 1px 5px rgba(0,0,0,.6)}
+.dashboard .masthead .datepill{display:inline-flex;align-items:center;width:max-content;max-width:100%;font-size:12px!important;padding:7px 12px!important;white-space:nowrap}
+@media(max-width:560px){.dashboard .masthead{min-height:196px!important;padding:22px 16px 24px!important}.dashboard .masthead h1{font-size:clamp(18px,4.65vw,25px)!important;letter-spacing:-.9px!important;line-height:1.4!important;margin:15px 0 8px!important;white-space:nowrap}.dashboard .masthead p{font-size:clamp(11px,3.05vw,14px)!important}}
+@media(max-width:330px){.dashboard .masthead h1{white-space:normal;font-size:18px!important}}
 </style>
 </head><body>
 <div class="dashboard" id="dashboard">
@@ -488,7 +482,9 @@ showPage('home');
 (function(){
  const pics=window.EMBEDDED_TRIP_PHOTOS;
  const style=document.createElement('style');
- style.textContent='.masthead{background-image:linear-gradient(90deg,#193b69dd,#4169957a),url("'+pics.banner+'")!important}.region-card img{object-fit:cover}';
+ style.textContent='.region-card img{object-fit:cover}';
+ const banner=document.querySelector('.dashboard .masthead');
+ if(banner){const img=pics.banner||pics.hanoi; if(img){banner.style.setProperty('background-image','url(\"'+img+'\")','important');banner.style.setProperty('background-size','cover','important');banner.style.setProperty('background-position','center 48%','important');}}
  document.head.appendChild(style);
  document.querySelectorAll('[id^="region-"]').forEach(el=>{let k=el.id.slice(7);if(pics[k]&&!el.getAttribute('src'))el.src=pics[k]});
 })();
