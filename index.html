@@ -135,6 +135,49 @@ html{-webkit-text-size-adjust:100%}button,a{-webkit-tap-highlight-color:transpar
   .dashboard .event { gap: 8px !important; }
 }
 </style>
+<style id="unified-guidebook-typography-v1">
+/* 통일된 가독성: 본문 15px, 보조 13px, 버튼 14px, 카드제목 17px */
+.dashboard { font-size:15px; line-height:1.6; }
+.dashboard .panel h2, .dashboard .inner-page h2 { font-size:21px; line-height:1.4; }
+.dashboard .panel-head button, .dashboard .smallbtn, .dashboard .region-edit button {font-size:14px;line-height:1.35;}
+.dashboard .statusline, .dashboard .note, .dashboard .info p, .dashboard .featurehero p, .dashboard .checkrow, .dashboard .fieldgroup, .dashboard .tool, .dashboard .weathergrid div {font-size:15px;line-height:1.65;}
+.dashboard .info h3, .dashboard .featurehero h3 {font-size:18px;line-height:1.45;}
+.dashboard .info small, .dashboard .info a, .dashboard .photo-credit, .dashboard .dash-foot {font-size:13px;line-height:1.5;}
+.dashboard .event h4 {font-size:18px!important;line-height:1.45!important;}
+.dashboard .event p {font-size:15px!important;line-height:1.65!important;}
+.dashboard .timecol span {font-size:14px!important;line-height:1.45!important;}
+.dashboard .type {font-size:12px!important;}
+.dashboard .action {font-size:14px!important;line-height:1.4;padding:7px 9px;}
+.dashboard .date b {font-size:14px;}
+.dashboard .date small {font-size:12px;}
+.dashboard .categorychips .chip, .dashboard .day-filter-bar button, .dashboard .food-day-filter button, .dashboard .filterbtn {font-size:14px!important;line-height:1.4;}
+.dashboard .day-filter-heading, .dashboard .food-filter-label {font-size:15px;}
+.dashboard .day-filter-heading span {font-size:13px;}
+.dashboard .quickgrid button {font-size:14px;line-height:1.4;}
+.dashboard .sidenav button {font-size:14px;}
+.dashboard .datepill {font-size:13px;}
+.dashboard .masthead p {font-size:15px;}
+.dashboard .region .regtext {font-size:22px;}
+.dashboard .region .regtext small {font-size:13px;}
+.dashboard .add {font-size:15px;}
+.dashboard .fieldgroup input, .dashboard .fieldgroup textarea {font-size:15px;}
+.dashboard .daybanner .daytext small {font-size:12px;}
+.dashboard .daybanner .daytext p {font-size:14px;line-height:1.45;}
+@media(max-width:850px){.dashboard .sidenav button {font-size:0;}}
+@media(max-width:560px){
+ .dashboard .sidenav button {font-size:11px;line-height:1.3;min-width:61px;}
+ .dashboard .masthead p {font-size:13px;}
+ .dashboard .region .regtext {font-size:16px;}
+ .dashboard .region .regtext small {font-size:12px;}
+ .dashboard .daybanner .daytext small {font-size:11px;}
+ .dashboard .daybanner .daytext h3 {font-size:19px;}
+ .dashboard .daybanner .daytext p {font-size:12px;}
+ .dashboard .panel h2, .dashboard .inner-page h2 {font-size:20px;}
+ .dashboard .date {min-width:52px;}
+ .dashboard .timecol {width:65px!important;}
+ .dashboard .event {gap:8px!important;}
+}
+</style>
 </head><body>
 <div class="dashboard" id="dashboard">
 <aside class="sidebar"><div class="brand"><span class="plane">✈</span>Hanoi · Sapa ·<br>Ninh Binh<br><small>Travel Guidebook</small></div><nav class="sidenav" id="dashnav">
