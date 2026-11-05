@@ -513,7 +513,65 @@ body:has(.dashboard){background:#e9e9e1;color:#253a33}
 .dashboard #schedule{margin:10px!important;padding:17px 12px!important}
 }
 @media(max-width:380px){.dashboard .masthead h1{font-size:25px!important}.dashboard .masthead{min-height:420px!important}}
-</style></head><body>
+</style>
+<style id="reference-layout-v5">
+/* Reference-led layout: full-width composition, no nested narrow columns. */
+.dashboard{--gold:#f0c85a;--forest:#073f2e;background:#f5f1e7!important}
+.dashboard .workspace{min-width:0!important;width:100%!important;flex:1!important;max-width:none!important}
+.dashboard .sidebar{background:linear-gradient(180deg,#003f2d,#00513c)!important}
+.dashboard .masthead{box-sizing:border-box!important;min-height:420px!important;padding:45px 35px 35px!important;background-position:center center!important;background-size:cover!important;border-radius:0!important;justify-content:center!important;gap:0!important}
+.dashboard .masthead .hero-eyebrow{font-family:Georgia,serif!important;font-style:italic!important;color:#fff8d8!important;font-size:17px!important;margin-bottom:16px!important}
+.dashboard .masthead .datepill{margin-bottom:19px!important}
+.dashboard .masthead h1{margin:0!important;max-width:660px!important;line-height:1.17!important;letter-spacing:-.045em!important;text-shadow:0 3px 12px #001c12a8!important}
+.dashboard .masthead .hero-locations{display:block!important;font-size:clamp(30px,4vw,52px)!important;white-space:nowrap!important}
+.dashboard .masthead .hero-booktitle{display:block!important;font-size:clamp(39px,4.7vw,60px)!important}
+.dashboard .masthead .hero-goldline{width:220px!important;height:4px!important;border-radius:50%!important;background:#eec957!important;margin:18px 0 16px!important}
+.dashboard .masthead p{font-size:clamp(14px,1.65vw,19px)!important;line-height:1.5!important;margin:0!important;color:white!important}
+.dashboard .content-area{box-sizing:border-box!important;max-width:none!important;width:100%!important;padding:0 16px 90px!important;background:linear-gradient(180deg,#074b37 0,#0b533c 340px,#f5f1e7 760px)!important}
+.dashboard .regions{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important;padding:14px 0 0!important;margin:0 0 15px!important}
+.dashboard .regions .region{box-sizing:border-box!important;height:220px!important;min-width:0!important;border:3px solid var(--gold)!important;border-radius:21px!important;overflow:hidden!important;box-shadow:0 8px 14px #002f2070!important}
+.dashboard .regions .region img{width:100%!important;height:100%!important;object-fit:cover!important}
+.dashboard .regions .region .regtext{left:15px!important;bottom:14px!important;font-size:clamp(20px,2.8vw,32px)!important;line-height:1.12!important;text-shadow:0 2px 7px #000!important}
+.dashboard .regions .region .regtext small{font-size:clamp(12px,1.4vw,17px)!important;margin-top:5px!important}
+.dashboard .premium-quick{margin:14px 0 18px!important;min-height:116px!important;border:1px solid #fff7d8!important;border-radius:24px!important;background:linear-gradient(120deg,#fffdf6,#f9f0d7)!important;box-shadow:0 8px 20px #002b1d36!important;padding:12px 6px!important;gap:0!important}
+.dashboard .premium-quick button{font-size:clamp(11px,1.45vw,16px)!important;color:#163f31!important;line-height:1.25!important;border-right:1px solid #d9cbae!important;border-radius:0!important;min-width:0!important}
+.dashboard .premium-quick button:last-child{border-right:0!important}
+.dashboard .premium-quick button span{font-size:clamp(23px,3vw,33px)!important;color:#97711d!important;margin-bottom:7px!important}
+.dashboard .main-grid{display:block!important;margin:0!important;max-width:none!important}
+.dashboard .main-grid>.panel{width:100%!important;box-sizing:border-box!important;margin:0!important;padding:24px 20px!important;border:1px solid #e8ddc8!important;border-radius:24px!important;box-shadow:0 7px 20px #2e3a2620!important;background:#fffdf7!important}
+.dashboard .main-grid>.sidepanels{display:none!important}
+.dashboard .panel-head h2{font-size:clamp(22px,2.6vw,31px)!important}
+.dashboard .date.active{background:#004a34!important;border:2px solid #e7bd40!important;color:#fff6d6!important;box-shadow:0 3px 8px #16492c55!important}
+.dashboard .dates{gap:6px!important}
+.dashboard .date{min-width:0!important;flex:1 0 67px!important;border-radius:14px!important}
+@media(min-width:950px){.dashboard .sidebar{width:112px!important;flex:0 0 112px!important}.dashboard .sidenav button{font-size:12px!important}.dashboard .brand{font-size:12px!important}.dashboard .masthead{min-height:435px!important}.dashboard .content-area{padding:0 14px 80px!important}}
+@media(max-width:700px){
+.dashboard .sidebar{display:none!important}
+.dashboard .workspace{width:100%!important}
+.dashboard .masthead{min-height:310px!important;padding:34px 18px 29px!important;background-position:60% center!important}
+.dashboard .masthead .hero-eyebrow{font-size:14px!important;margin-bottom:12px!important}
+.dashboard .masthead .datepill{font-size:13px!important;margin-bottom:15px!important}
+.dashboard .masthead .hero-locations{font-size:clamp(21px,6vw,31px)!important;letter-spacing:-.06em!important}
+.dashboard .masthead .hero-booktitle{font-size:clamp(32px,8.5vw,43px)!important}
+.dashboard .masthead .hero-goldline{width:160px!important;margin:12px 0!important}
+.dashboard .masthead p{font-size:12px!important;max-width:90%!important}
+.dashboard .content-area{padding:0 9px 94px!important;background:linear-gradient(180deg,#0a5039 0,#0a5039 210px,#f5f1e7 560px)!important}
+.dashboard .regions{gap:6px!important;margin:0 0 12px!important;padding:10px 0 0!important}
+.dashboard .regions .region{height:clamp(118px,38vw,165px)!important;border-width:2px!important;border-radius:13px!important}
+.dashboard .regions .region .regtext{left:7px!important;bottom:9px!important;font-size:clamp(16px,4.7vw,23px)!important}
+.dashboard .regions .region .regtext small{font-size:11px!important}
+.dashboard .regions .region .arrow{display:none!important}
+.dashboard .premium-quick{margin:12px 0 14px!important;min-height:84px!important;border-radius:17px!important;padding:8px 1px!important}
+.dashboard .premium-quick button{font-size:10px!important;padding:3px 0!important}
+.dashboard .premium-quick button span{font-size:21px!important;margin-bottom:5px!important}
+.dashboard .main-grid>.panel{padding:18px 12px!important;border-radius:19px!important}
+.dashboard .panel-head h2{font-size:22px!important}
+.dashboard .dates{overflow-x:auto!important;display:flex!important;flex-wrap:nowrap!important;scrollbar-width:none!important}
+.dashboard .date{flex:0 0 58px!important;min-width:58px!important}
+}
+@media(max-width:360px){.dashboard .masthead{min-height:290px!important}.dashboard .masthead .hero-locations{font-size:20px!important}.dashboard .regions .region .regtext{font-size:15px!important}.dashboard .premium-quick button{font-size:9px!important}}
+</style>
+</head><body>
 <div class="dashboard" id="dashboard">
 <aside class="sidebar"><div class="brand"><span class="plane">✈</span>Hanoi · Sapa ·<br>Ninh Binh<br><small>Travel Guidebook</small></div><nav class="sidenav" id="dashnav">
 <button class="active" data-page="home"><span class="ico">⌂</span>홈</button><button data-page="schedule"><span class="ico">▦</span>여행 일정</button><button data-page="places"><span class="ico">♧</span>방문 명소</button><button data-page="stay"><span class="ico">▤</span>숙소</button><button data-page="food"><span class="ico">♨</span>맛집</button><button data-page="map"><span class="ico">◫</span>지도</button><button data-page="check"><span class="ico">☑</span>체크리스트</button><button data-page="memo"><span class="ico">▤</span>메모</button><button data-page="photos"><span class="ico">▧</span>내 사진</button><button data-page="settings"><span class="ico">⚙</span>설정 / 백업</button></nav><div class="side-art">♜</div></aside>
