@@ -710,13 +710,50 @@ body:has(.dashboard){background:#e9e9e1;color:#253a33}
   .dashboard {padding-bottom:calc(85px + env(safe-area-inset-bottom)) !important;}
 }
 </style>
+
+<style id="premium-clean-final-2026">
+/* Final mobile design: one main itinerary card, no duplicated shortcut bar. */
+:root{--forest:#075444;--forest-dark:#063d33;--gold:#e3bc67;--cream:#fffaf0}
+.dashboard .premium-quick,.dashboard .quickgrid{display:none!important}
+.dashboard .main-grid{display:block!important;margin-top:14px!important}
+.dashboard .main-grid>.panel{width:100%;box-sizing:border-box}
+.dashboard .sidepanels{display:none!important}
+.dashboard .masthead{background-image:linear-gradient(90deg,rgba(3,43,39,.83),rgba(4,46,41,.1)),url("https://images.unsplash.com/photo-1500534623283-312aade485b7?w=1600&q=85")!important}
+.dashboard .masthead .hero-locations,.dashboard .masthead .hero-booktitle{color:#fff9e8!important}
+.dashboard .regions{gap:9px!important}
+.dashboard .region{border:2px solid #e9c777!important;border-radius:17px!important;box-shadow:0 6px 15px #073b2c29!important}
+.dashboard .panel-head button{color:#174c40!important;font-weight:750!important;font-size:12px!important}
+.dashboard .main-grid>.panel{background:#fffaf2!important;border:1px solid #e7dbc3!important;border-radius:22px!important;box-shadow:0 12px 26px #143f3115!important}
+@media(max-width:700px){
+  html,body{overflow-x:hidden!important}
+  .dashboard .masthead{height:154px!important;padding:16px 18px!important;box-sizing:border-box!important}
+  .dashboard .masthead h1{font-size:clamp(23px,6vw,30px)!important;line-height:1.16!important}
+  .dashboard .content-area{padding-left:12px!important;padding-right:12px!important}
+  .dashboard .regions{margin-top:-8px!important}
+  .dashboard .region{height:112px!important}
+  .dashboard .region .regtext{font-size:14px!important;left:9px!important;bottom:9px!important}
+  .dashboard .region .regtext small{font-size:10px!important}
+  .dashboard .main-grid{margin-top:13px!important}
+  .dashboard .main-grid>.panel{padding:16px 13px!important}
+  .dashboard .panel-head{margin-bottom:9px!important}
+  .dashboard .panel-head h2{font-size:19px!important;margin-bottom:0!important}
+  .dashboard .sidebar{bottom:0!important;height:calc(68px + env(safe-area-inset-bottom))!important;padding:3px 5px env(safe-area-inset-bottom)!important;background:#063f35!important}
+  .dashboard .sidebar .sidenav{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:2px!important;overflow:hidden!important;align-items:stretch!important}
+  .dashboard .sidebar .sidenav button{display:flex!important;min-width:0!important;width:100%!important;max-width:100%!important;flex:none!important;padding:4px 1px!important;gap:2px!important;border-radius:10px!important;font-size:10px!important;white-space:nowrap!important;letter-spacing:-.4px!important}
+  .dashboard .sidebar .sidenav button .ico{font-size:21px!important;width:auto!important;line-height:1.1!important}
+  .dashboard .sidebar .sidenav button:nth-child(n+7){display:none!important}
+  .dashboard .sidebar .sidenav button.active{background:#115b4a!important;color:#f1c86f!important;box-shadow:inset 0 0 0 1px #e7bd67!important}
+  .dashboard{padding-bottom:calc(84px + env(safe-area-inset-bottom))!important}
+  .dashboard .schedule-page-header{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important}
+}
+</style>
 </head><body>
 <div class="dashboard" id="dashboard">
 <aside class="sidebar"><div class="brand"><span class="plane">✈</span>Hanoi · Sapa ·<br>Ninh Binh<br><small>Travel Guidebook</small></div><nav class="sidenav" id="dashnav">
 <button class="active" data-page="home"><span class="ico">⌂</span>홈</button><button data-page="schedule"><span class="ico">▦</span>여행 일정</button><button data-page="places"><span class="ico">♧</span>방문 명소</button><button data-page="stay"><span class="ico">▤</span>숙소</button><button data-page="food"><span class="ico">♨</span>맛집</button><button data-page="map"><span class="ico">◫</span>지도</button><button data-page="check"><span class="ico">☑</span>체크리스트</button><button data-page="memo"><span class="ico">▤</span>메모</button><button data-page="photos"><span class="ico">▧</span>내 사진</button><button data-page="settings"><span class="ico">⚙</span>설정 / 백업</button></nav><div class="side-art">♜</div></aside>
 <div class="workspace"><header class="masthead"><div class="hero-eyebrow">✈ &nbsp; Vietnam Travel Guidebook</div><span class="datepill">✈ 2026.12.17 – 12.26 (10일)</span><h1><span class="hero-locations">하노이 · 사파 · 닌빈</span><span class="hero-booktitle">여행 가이드북</span></h1><div class="hero-goldline" aria-hidden="true"></div><p>도시의 매력, 산악의 풍경, 자연의 절경을 한 번에</p></header>
 <div class="content-area"><div class="regions"><button class="region" data-region="hanoi"><img id="region-hanoi" alt="하노이 기찻길"><span class="regtext">📍 하노이<small>Hanoi</small></span><span class="arrow">➜</span></button><button class="region" data-region="sapa"><img id="region-sapa" alt="판시판"><span class="regtext">📍 사파<small>Sapa</small></span><span class="arrow">➜</span></button><button class="region" data-region="ninh"><img id="region-ninh" alt="닌빈"><span class="regtext">📍 닌빈<small>Ninh Binh</small></span><span class="arrow">➜</span></button></div>
-<section class="page active" id="page-home"><div class="premium-quick" aria-label="빠른 메뉴"><button data-go="schedule"><span>▦</span>여행 일정</button><button data-go="places"><span>♧</span>방문 명소</button><button data-go="stay"><span>▤</span>숙소</button><button data-go="food"><span>♨</span>맛집</button><button data-go="map"><span>◫</span>지도</button><button data-go="check"><span>☑</span>체크리스트</button></div><div class="main-grid"><div class="panel"><div class="panel-head"><h2>🗓 여행 일정</h2><button data-go="schedule">전체 일정 보기 ❯</button></div><div id="home-schedule"></div></div><div class="sidepanels"><div class="panel"><h2>⚡ 빠른 메뉴</h2><div class="quickgrid"><button data-go="places"><b>📍</b>방문 명소</button><button data-go="stay"><b>🛏</b>숙소</button><button data-go="food"><b>🍴</b>맛집</button><button data-go="map"><b>🗺</b>지도</button><button data-go="check"><b>☑</b>체크리스트</button><button data-go="photos"><b>▧</b>내 사진</button></div></div><div class="panel"><h2>🌤 12월 여행지 기온 참고</h2><div class="weathergrid"><div><b>하노이</b>약 15~23℃</div><div><b>사파</b>약 5~15℃</div><div><b>닌빈</b>약 14~23℃</div></div><p class="statusline">계절별 대략적인 범위이며 실제 예보가 아닙니다.</p></div></div></div></section>
+<section class="page active" id="page-home"><div class="premium-quick" aria-label="빠른 메뉴"><button data-go="schedule"><span>▦</span>여행 일정</button><button data-go="places"><span>♧</span>방문 명소</button><button data-go="stay"><span>▤</span>숙소</button><button data-go="food"><span>♨</span>맛집</button><button data-go="map"><span>◫</span>지도</button><button data-go="check"><span>☑</span>체크리스트</button></div><div class="main-grid"><div class="panel"><div class="panel-head"><h2>🗓 여행 일정</h2><button data-go="schedule">전체 일정 보기 ❯</button></div><div id="home-schedule"></div></div></div></section>
 <section class="page inner-page panel" id="page-schedule"><div class="schedule-page-header"><button type="button" class="schedule-back" id="schedule-back" aria-label="홈으로 돌아가기">〈 홈으로</button><span class="schedule-page-label">전체 여행 일정</span></div><div id="schedule-target"></div></section>
 <section class="page inner-page panel" id="page-places"><h2>📍 방문 명소 · 한국어 관광 해설</h2><div id="places-target"></div></section>
 <section class="page inner-page panel" id="page-stay"><h2>🛏 숙소 및 교통</h2><div id="stay-target"></div></section>
